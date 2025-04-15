@@ -1,5 +1,48 @@
-$bgColor: red;
+@use 'variables';
 
+//Fontes
+@mixin text($fontSize: 16px) {
+	font-family: variables.$secondaryfont;
+	font-size: $fontSize;
+	line-height: $fontSize + 10px;
+	color: variables.$primarycolor;
+}
+
+@mixin titles($fontSize: 16px) {
+	font-family: variables.$primaryfont;
+	font-size: $fontSize;
+	line-height: $fontSize + 10px;
+	color: variables.$primarycolor;
+}
+
+.txt {
+	&--lg {
+		@include titles(36px);
+		@media (max-width: 767px) {
+			@include titles(28px);
+		}
+	}
+
+	&--md {
+		@include titles(24px);
+		@media (max-width: 767px) {
+			@include titles(20px);
+		}
+	}
+
+	&--sm {
+		@include text();
+	}
+}
+
+// Reset CSS
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+// Layout
 body {
-	background-color: $bgColor;
+	background-color: variables.$bgcolor;
 }
