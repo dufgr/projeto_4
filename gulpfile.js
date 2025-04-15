@@ -8,7 +8,11 @@ function styles() {
 		.pipe(gulp.dest('./dist/css'))
 }
 
+function images() {
+	return gulp.src('./src/img/**/*').pipe(gulp.dest('./dist/img/'))
+}
+
 exports.default = styles
 exports.watch = function () {
-	gulp.watch('./src/styles/*.scss', gulp.parallel(styles))
+	gulp.watch('./src/styles/*.scss', gulp.parallel([styles, images]))
 }
