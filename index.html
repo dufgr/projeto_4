@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Welcome to the Matrix</title>
-		<link rel="stylesheet" href="dist/css/main.css" />
+		<link rel="stylesheet" href="./dist/css/main.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -13,15 +13,21 @@
 		/>
 	</head>
 	<body>
-		<div class="hero">
-			<h1 class="title txt--lg">Título</h1>
-			<h2 class="subtitle txt--md">Subtítulo</h2>
-			<p class="description txt--sm">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
-				tempore. Fuga ab error, ipsa odio, enim porro, alias omnis
-				tempore doloremque voluptate eius quo. Deleniti officiis qui
-				porro vero rerum?
-			</p>
-		</div>
+		<section class="hero">
+			<div class="hero__overlay"></div>
+			<div class="hero__content">
+				<h1 class="hero__content__branding">
+					<img
+						src="./dist/img/logos/matrix-logo-effect.png"
+						alt="The Matrix"
+					/>
+				</h1>
+				<h3 class="txt--lg">Choose one and take your destiny</h3>
+				<div class="hero__content__buttons">
+					<a class="red__pill txt--btn" href="#">Red Pill</a>
+					<a class="blue__pill txt--btn" href="#">Blue Pill</a>
+				</div>
+			</div>
+		</section>
 	</body>
 </html>

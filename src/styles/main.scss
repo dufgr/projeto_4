@@ -1,4 +1,5 @@
 @use 'variables';
+@use 'hero';
 
 //Fontes
 @mixin text($fontSize: 16px) {
@@ -32,6 +33,13 @@
 
 	&--sm {
 		@include text();
+	}
+
+	&--btn {
+		@include titles(18px);
+		@media (max-width: 767px) {
+			@include text(16px);
+		}
 	}
 }
 
