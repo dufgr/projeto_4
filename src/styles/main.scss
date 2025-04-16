@@ -3,6 +3,7 @@
 @use 'movies';
 @use 'about';
 @use 'characters';
+@use 'watch';
 
 //Mixins
 @mixin text($fontSize: 16px) {
@@ -48,6 +49,7 @@
 .txt {
 	&--lg {
 		@include titles(36px);
+		font-weight: 700;
 		@media (max-width: 767px) {
 			@include titles(26px);
 		}
@@ -55,6 +57,7 @@
 
 	&--md {
 		@include titles(24px);
+		font-weight: 600;
 		@media (max-width: 767px) {
 			@include titles(20px);
 		}
@@ -66,6 +69,7 @@
 
 	&--btn {
 		@include titles(18px);
+		font-weight: 600;
 		@media (max-width: 767px) {
 			@include text(16px);
 		}

@@ -1,0 +1,41 @@
+@use 'variables';
+
+.watch {
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		justify-items: center;
+		justify-content: center;
+		gap: 30px;
+		margin-top: 50px;
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 15px;
+
+			& img {
+				height: 40px;
+			}
+
+			&__name {
+				font-family: variables.$secondaryfont;
+				color: variables.$textcolor;
+				font-size: 18px;
+				font-weight: 600;
+				margin-top: 10px;
+			}
+
+			&__price {
+				font-family: variables.$secondaryfont;
+				color: variables.$textcolor;
+				font-size: 16px;
+				font-weight: 400;
+				text-decoration-color: variables.$textcolor;
+				text-underline-offset: 5px;
+			}
+		}
+	}
+}
