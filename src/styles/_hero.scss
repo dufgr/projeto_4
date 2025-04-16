@@ -2,14 +2,11 @@
 
 .hero {
 	display: flex;
-	min-height: 80vh;
+	min-height: 60vh;
 	background-image: url(../img/matrix-bg.webp);
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
-	@media (max-width: 767px) {
-		min-height: 60vh;
-	}
 
 	&__overlay {
 		position: absolute;
@@ -18,7 +15,7 @@
 		background-image: linear-gradient(
 			to bottom,
 			rgba(18, 18, 18, 0) 0%,
-			rgba(18, 18, 18, 1) 90%
+			rgba(18, 18, 18, 1) 100%
 		);
 		width: 100%;
 		height: 100%;
@@ -31,53 +28,9 @@
 		z-index: 999;
 		justify-content: center;
 		align-items: center;
-		gap: 30px;
 
 		&__branding img {
 			width: 100%;
-		}
-
-		&__buttons {
-			display: flex;
-			margin-top: 20px;
-			gap: 40px;
-
-			@media (max-width: 767px) {
-				gap: 20px;
-			}
-
-			a {
-				padding: 8px 40px;
-				border-radius: 30px;
-				text-decoration: none;
-				color: variables.$textcolor;
-				text-align: center;
-			}
-
-			.red__pill {
-				background: linear-gradient(
-					180deg,
-					rgba(209, 46, 46, 1) 50%,
-					rgba(133, 0, 0, 1) 100%
-				);
-				border: 2px solid rgba(133, 0, 0, 1);
-				&:hover {
-					background: none;
-				}
-			}
-
-			.blue__pill {
-				background: linear-gradient(
-					180deg,
-					rgba(24, 66, 133, 1) 0%,
-					rgba(0, 38, 99, 1) 100%
-				);
-				border: 2px solid rgba(0, 38, 99, 1);
-				&:hover {
-					background: none;
-					border: 2px solid rgba(24, 66, 133, 1);
-				}
-			}
 		}
 	}
 }

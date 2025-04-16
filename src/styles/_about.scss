@@ -19,5 +19,48 @@
 			font-family: variables.$secondaryfont;
 			text-align: center;
 		}
+
+		&__buttons {
+			display: flex;
+			margin-top: 40px;
+			gap: 40px;
+
+			@media (max-width: 767px) {
+				gap: 20px;
+			}
+
+			a {
+				padding: 8px 40px;
+				border-radius: 30px;
+				text-decoration: none;
+				color: variables.$textcolor;
+				text-align: center;
+			}
+
+			.red__pill {
+				background: linear-gradient(
+					180deg,
+					rgba(209, 46, 46, 1) 50%,
+					rgba(133, 0, 0, 1) 100%
+				);
+				border: 2px solid rgba(133, 0, 0, 1);
+				&:hover {
+					background: none;
+				}
+			}
+
+			.blue__pill {
+				background: linear-gradient(
+					180deg,
+					rgba(24, 66, 133, 1) 0%,
+					rgba(0, 38, 99, 1) 100%
+				);
+				border: 2px solid rgba(0, 38, 99, 1);
+				&:hover {
+					background: none;
+					border: 2px solid rgba(24, 66, 133, 1);
+				}
+			}
+		}
 	}
 }
