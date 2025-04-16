@@ -2,6 +2,7 @@
 @use 'hero';
 @use 'movies';
 @use 'about';
+@use 'characters';
 
 //Mixins
 @mixin text($fontSize: 16px) {

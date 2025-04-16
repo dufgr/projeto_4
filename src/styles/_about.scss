@@ -6,7 +6,11 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap: 30px;
+
+		& h2 {
+			margin-bottom: 50px;
+			text-align: center;
+		}
 
 		&__description {
 			font-size: 22px;
