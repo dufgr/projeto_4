@@ -1,0 +1,50 @@
+@use 'variables';
+
+.movies {
+	&__tabs {
+		margin: 50px 0;
+
+		&__btn {
+			font-family: variables.$primaryfont;
+			font-size: 20px;
+			border: none;
+			padding-bottom: 5px;
+			background: none;
+			text-transform: uppercase;
+			margin: 0 1vw;
+			color: variables.$textcolor;
+			cursor: pointer;
+			&:hover {
+				color: variables.$primarycolor;
+			}
+
+			&--is-active {
+				color: variables.$primarycolor;
+				border-bottom: 5px solid variables.$primarycolor;
+			}
+		}
+	}
+
+	&__list {
+		display: none;
+
+		&--is-active {
+			display: block;
+		}
+
+		&__item {
+			max-width: 700px;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+
+			& img {
+				width: 300px;
+				height: 300px;
+			}
+		}
+	}
+}

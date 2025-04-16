@@ -1,3 +1,5 @@
+@use 'variables';
+
 .hero {
 	display: flex;
 	min-height: 80vh;
@@ -5,6 +7,9 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
+	@media (max-width: 767px) {
+		min-height: 60vh;
+	}
 
 	&__overlay {
 		position: absolute;
@@ -23,32 +28,29 @@
 	&__content {
 		display: flex;
 		flex-direction: column;
-		max-width: 1280px;
-		width: 100%;
-		margin: 0 auto;
-		align-items: center;
+		z-index: 999;
 		justify-content: center;
-		gap: 20px;
+		align-items: center;
 
-		&__branding {
-			z-index: 999;
-		}
-
-		& h3 {
-			z-index: 999;
+		&__branding img {
+			width: 100%;
 		}
 
 		&__buttons {
 			display: flex;
-			z-index: 999;
+			margin-top: 40px;
 			gap: 40px;
-			margin-top: 20px;
+
+			@media (max-width: 767px) {
+				gap: 20px;
+			}
 
 			a {
 				padding: 8px 40px;
 				border-radius: 30px;
 				text-decoration: none;
-				color: #fff;
+				color: variables.$textcolor;
+				text-align: center;
 			}
 
 			.red__pill {

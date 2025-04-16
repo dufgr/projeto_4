@@ -1,12 +1,13 @@
 @use 'variables';
 @use 'hero';
+@use 'movies';
 
-//Fontes
+//Mixins
 @mixin text($fontSize: 16px) {
 	font-family: variables.$secondaryfont;
 	font-size: $fontSize;
 	line-height: $fontSize + 10px;
-	color: variables.$primarycolor;
+	color: variables.$textcolor;
 }
 
 @mixin titles($fontSize: 16px) {
@@ -16,11 +17,38 @@
 	color: variables.$primarycolor;
 }
 
+@mixin layout() {
+	max-width: 1280px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	overflow-x: hidden;
+}
+
+// Layout da Seção
+
+.container {
+	@include layout();
+	padding: 80px 50px;
+	@media (max-width: 1024px) {
+		width: 90%;
+		padding: 60px 0;
+	}
+	@media (max-width: 767px) {
+		width: 80%;
+		padding: 50px 0;
+	}
+}
+
+// Modificadores de Texto
 .txt {
 	&--lg {
 		@include titles(36px);
 		@media (max-width: 767px) {
-			@include titles(28px);
+			@include titles(26px);
 		}
 	}
 

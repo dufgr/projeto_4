@@ -15,19 +15,90 @@
 	<body>
 		<section class="hero">
 			<div class="hero__overlay"></div>
-			<div class="hero__content">
-				<h1 class="hero__content__branding">
-					<img
-						src="./dist/img/logos/matrix-logo-effect.png"
-						alt="The Matrix"
-					/>
-				</h1>
-				<h3 class="txt--lg">Choose your destiny</h3>
-				<div class="hero__content__buttons">
-					<a class="red__pill txt--btn" href="#">Red Pill</a>
-					<a class="blue__pill txt--btn" href="#">Blue Pill</a>
+			<div class="container">
+				<div class="hero__content">
+					<h1 class="hero__content__branding">
+						<img
+							src="./dist/img/logos/matrix-logo-effect.png"
+							alt="The Matrix"
+						/>
+					</h1>
+					<h3 class="txt--lg">Choose your destiny</h3>
+					<div class="hero__content__buttons">
+						<a class="red__pill txt--btn" href="#">Red Pill</a>
+						<a class="blue__pill txt--btn" href="#">Blue Pill</a>
+					</div>
 				</div>
 			</div>
 		</section>
+		<section class="movies">
+			<div class="container">
+				<h2 class="txt--lg">Filmes da Franquia</h2>
+				<nav class="movies__tabs">
+					<button
+						data-tab-button="matrix"
+						class="movies__tabs__btn movies__tabs__btn--is-active"
+					>
+						Matrix
+					</button>
+					<button
+						data-tab-button="matrix_reloaded"
+						class="movies__tabs__btn"
+					>
+						Matrix Reloaded
+					</button>
+					<button
+						data-tab-button="matrix_revolutions"
+						class="movies__tabs__btn"
+					>
+						Matrix Revolutions
+					</button>
+					<button
+						data-tab-button="matrix_ressurections"
+						class="movies__tabs__btn"
+					>
+						Matrix Ressurections
+					</button>
+				</nav>
+				<div
+					data-tab-id="matrix"
+					class="movies__list movies__list--is-active"
+				>
+					<div class="movies__list__item">
+						<img src="https://placehold.co/200x200" alt="" />
+						<h2 class="txt--md">Matrix</h2>
+						<p class="txt--sm">
+							Lorem, ipsum dolor sit amet consectetur adipisicing
+							elit. Fugit voluptates dicta modi, iusto ipsam
+							corrupti sunt itaque? Molestiae soluta expedita
+							cumque assumenda, voluptate consequuntur enim,
+							excepturi quam fuga vel architecto.
+						</p>
+					</div>
+				</div>
+				<div data-tab-id="matrix_reloaded" class="movies__list">
+					<div class="movies__list__item">
+						<img src="https://placehold.co/200x200" alt="" />
+						<h2 class="txt--md">Matrix Reloaded</h2>
+						<p class="txt--sm">Descrição do filme</p>
+					</div>
+				</div>
+				<div data-tab-id="matrix_revolutions" class="movies__list">
+					<div class="movies__list__item">
+						<img src="https://placehold.co/200x200" alt="" />
+						<h2 class="txt--md">Matrix Revolutions</h2>
+						<p class="txt--sm">Descrição do filme</p>
+					</div>
+				</div>
+				<div data-tab-id="matrix_ressurections" class="movies__list">
+					<div class="movies__list__item">
+						<img src="https://placehold.co/200x200" alt="" />
+						<h2 class="txt--md">Matrix Ressurections</h2>
+						<p class="txt--sm">Descrição do filme</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src="./src/scripts/main.js"></script>
 	</body>
 </html>
