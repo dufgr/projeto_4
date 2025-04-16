@@ -1,6 +1,7 @@
 @use 'variables';
 @use 'hero';
 @use 'movies';
+@use 'about';
 
 //Mixins
 @mixin text($fontSize: 16px) {
@@ -29,7 +30,6 @@
 }
 
 // Layout da Seção
-
 .container {
 	@include layout();
 	padding: 80px 50px;
@@ -78,7 +78,7 @@
 	box-sizing: border-box;
 }
 
-// Layout
+// Layout Geral
 body {
 	background-color: variables.$bgcolor;
 }
