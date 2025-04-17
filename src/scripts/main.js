@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 	const buttons = document.querySelectorAll('[data-tab-button]')
+	const questions = document.querySelectorAll('[data-faq-question]')
 
 	for (let i = 0; i < buttons.length; i++) {
 		buttons[i].addEventListener('click', function (button) {
@@ -11,7 +12,18 @@ document.addEventListener('DOMContentLoaded', function () {
 			button.target.classList.add('movies__tabs__btn--is-active')
 		})
 	}
+
+	for (let i = 0; i < questions.length; i++) {
+		questions[i].addEventListener('click', OpenCloseQuestion)
+	}
 })
+
+function OpenCloseQuestion(e) {
+	const qClass = 'faq__questions__item--is-open'
+	const eParent = e.target.parentNode
+
+	eParent.classList.toggle(qClass)
+}
 
 function removeBtn() {
 	const buttons = document.querySelectorAll('[data-tab-button]')
