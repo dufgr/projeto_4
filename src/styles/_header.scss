@@ -1,0 +1,59 @@
+@use 'variables';
+
+.header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 15px 100px;
+	display: flex;
+	justify-content: space-between;
+	z-index: 999;
+	background-color: variables.$header;
+	transition: background-color 0.5s ease;
+
+	@media (max-width: 1024px) {
+		padding: 15px 35px;
+	}
+	@media (max-width: 767px) {
+		padding: 15px 20px;
+	}
+
+	&--is-hidden {
+		background-color: transparent;
+		transition: background-color 0.5s ease;
+
+		.header {
+			&__logo {
+				visibility: hidden;
+				transition: opacity 0.5s ease;
+			}
+		}
+	}
+
+	&__logo {
+		max-width: 150px;
+		width: 100%;
+		transition: opacity 0.5s ease;
+	}
+
+	&__links {
+		display: flex;
+		gap: 30px;
+		align-items: center;
+		justify-content: center;
+
+		&__item {
+			& a {
+				text-decoration: none;
+				font-size: 20px;
+
+				&:hover {
+					color: variables.$hovercolor;
+					border-bottom: 2px solid variables.$hovercolor;
+					padding-bottom: 5px;
+				}
+			}
+		}
+	}
+}

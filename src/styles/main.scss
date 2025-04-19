@@ -6,6 +6,7 @@
 @use 'watch';
 @use 'faq';
 @use 'footer';
+@use 'header';
 
 //Mixins
 @mixin text($fontSize: 16px) {
@@ -88,6 +89,7 @@
 // Layout Geral
 body {
 	background-color: variables.$bgcolor;
+	overflow-x: hidden;
 }
 
 li {
