@@ -15,16 +15,23 @@
 				color: variables.$textcolor;
 				letter-spacing: 1px;
 				font-size: 18px;
+				line-height: 28px;
 				padding: 24px;
 				display: block;
 				cursor: pointer;
 				position: relative;
+				margin-right: 24px;
+
+				@media (max-width: 767px) {
+					font-size: 16px;
+					line-height: 26px;
+				}
 
 				&::after {
 					content: '+';
 					position: absolute;
 					top: 0;
-					right: 24px;
+					right: 0;
 					height: 100%;
 					display: flex;
 					align-items: center;

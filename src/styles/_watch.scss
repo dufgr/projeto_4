@@ -9,6 +9,11 @@
 		gap: 30px;
 		margin-top: 50px;
 
+		@media (max-width: 767px) {
+			grid-template-columns: 1fr 1fr;
+			gap: 50px 30px;
+		}
+
 		&__item {
 			display: flex;
 			flex-direction: column;

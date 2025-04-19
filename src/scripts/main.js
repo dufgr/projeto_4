@@ -31,6 +31,14 @@ document.addEventListener('DOMContentLoaded', function () {
 	for (let i = 0; i < questions.length; i++) {
 		questions[i].addEventListener('click', OpenCloseQuestion)
 	}
+
+	// Menu Mobile
+	const menuToggle = document.querySelector('.header__menu-toggle')
+	const menuLinks = document.querySelector('.header__links')
+
+	menuToggle.addEventListener('click', () => {
+		menuLinks.classList.toggle('header__links--is-open')
+	})
 })
 
 // Header

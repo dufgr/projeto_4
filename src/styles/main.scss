@@ -31,19 +31,19 @@
 	justify-content: center;
 	align-items: center;
 	margin: 0 auto;
-	overflow-x: hidden;
 }
 
 // Layout da Seção
 .container {
 	@include layout();
 	padding: 80px 50px;
+
 	@media (max-width: 1024px) {
 		width: 90%;
 		padding: 60px 0;
 	}
 	@media (max-width: 767px) {
-		width: 80%;
+		width: 85%;
 		padding: 50px 0;
 	}
 }
@@ -53,6 +53,7 @@
 	&--lg {
 		@include titles(36px);
 		font-weight: 700;
+
 		@media (max-width: 767px) {
 			@include titles(26px);
 		}
@@ -61,6 +62,7 @@
 	&--md {
 		@include titles(24px);
 		font-weight: 600;
+
 		@media (max-width: 767px) {
 			@include titles(20px);
 		}
@@ -73,6 +75,7 @@
 	&--btn {
 		@include titles(18px);
 		font-weight: 600;
+
 		@media (max-width: 767px) {
 			@include text(16px);
 		}

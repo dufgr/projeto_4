@@ -2,7 +2,14 @@
 
 .movies {
 	&__tabs {
+		display: flex;
 		margin: 50px 0;
+		gap: 0 30px;
+
+		@media (max-width: 767px) {
+			flex-direction: column;
+			gap: 15px 0;
+		}
 
 		&__btn {
 			font-family: variables.$primaryfont;
@@ -11,9 +18,9 @@
 			padding-bottom: 5px;
 			background: none;
 			text-transform: uppercase;
-			margin: 0 1vw;
 			color: variables.$textcolor;
 			cursor: pointer;
+
 			&:hover {
 				color: variables.$primarycolor;
 			}
